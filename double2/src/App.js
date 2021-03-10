@@ -1,14 +1,13 @@
 import React from 'react'
 
-import * as SC from "./components/Header/HeaderStyle"
-
-import "./main.css"
-
-import GlobalStyles from "./global"
-import Header from './components/Header'
-
 import Banner from "./assets/banner.png"
 
+import * as SC from "./components/Header/HeaderStyle"
+import GlobalStyles from "./global"
+import "./main.css"
+
+import Header from './components/Header'
+import CardProduct from './components/Product_Card'
 
 function App() {
   return (
@@ -16,6 +15,7 @@ function App() {
       <GlobalStyles/>
       <Header/>
       <SC.Linha src={Banner}/>
+      <CardProduct/>
     </div>
   );
 }
