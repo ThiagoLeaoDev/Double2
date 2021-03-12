@@ -46,13 +46,6 @@ table {
 a{
 	text-decoration: none;
 }
-body {
-	line-height: 1;
-		//Variáveis
-  --black: #0D0D0F;
-	--white: #FFFAFA;
-	font-family: 'Poppins', sans-serif;
-}
 
 body::-webkit-scrollbar {
   width: 8px;             /* width of the entire scrollbar */
@@ -66,6 +59,16 @@ body::-webkit-scrollbar-thumb {
   background-color: #c2c2c2;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 2px solid #FFFFFF;  /* creates padding around scroll thumb */
+}
+
+body {
+	line-height: 1;
+		//Variáveis
+  --black: #0D0D0F;
+	--white: #FFFAFA;
+	--light-grey: #9A9A9A;
+	--pastel-yellow: #FFBA52;
+	font-family: 'Poppins', sans-serif;
 }
 
 `
