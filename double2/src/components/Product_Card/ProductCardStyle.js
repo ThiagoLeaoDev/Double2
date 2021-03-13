@@ -38,10 +38,21 @@ export const Heart = styled.img`
 
 export const SaleFlag = styled.div`
   position: absolute;
+  width: 24px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #EA8E8E;
+  margin-left: 270px;
+  margin-top: 324px;
 `;
 
 export const TextSale = styled.p`
-
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  color: var(--white);
+  font-weight: bold;
 `;
 
 export const ContainerButtons = styled.div`

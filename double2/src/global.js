@@ -68,6 +68,7 @@ body {
 	--white: #FFFAFA;
 	--light-grey: #9A9A9A;
 	--pastel-yellow: #FFBA52;
+	--pastel-red: #EA8E8E;
 	font-family: 'Poppins', sans-serif;
 }
 
