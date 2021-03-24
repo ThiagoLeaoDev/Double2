@@ -66,6 +66,7 @@ body {
 		//Variáveis
   --black: #0D0D0F;
 	--white: #FFFAFA;
+	--grey: #616161;
 	--light-grey: #9A9A9A;
 	--pastel-yellow: #FFBA52;
 	--pastel-red: #EA8E8E;

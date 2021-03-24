@@ -1,8 +1,14 @@
 import styled from "styled-components"
+import {motion} from "framer-motion"
+
 
 export const CardProduct = styled.div`
   width: 300px;
+  &:hover{
+    cursor: pointer;
+  }
 `;
+
 
 export const NewFlag = styled.div`
   position: absolute;
@@ -34,6 +40,7 @@ export const ContainerHeart = styled.a`
 export const Heart = styled.img`
   height: 40px;
   width: 40px;
+  fill: white;
 `;
 
 export const SaleFlag = styled.div`
@@ -55,16 +62,18 @@ export const TextSale = styled.p`
   font-weight: bold;
 `;
 
-export const ContainerButtons = styled.div`
+export const ContainerButtons = styled(motion.div)`
   position: absolute;
   width: 300px;
   margin-top: 395px;
   height: 65px;
+  transition: display 1s ease;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.4);
 `;
+
 
 export const ButtonView = styled.a`
   background-color: var(--black);
@@ -73,7 +82,10 @@ export const ButtonView = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 8px
+  border-radius: 8px;
+  &:hover{
+    opacity: 0.8;
+  }
 `;
 
 export const ButtonProductText = styled.p`

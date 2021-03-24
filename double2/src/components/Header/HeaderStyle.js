@@ -53,10 +53,6 @@ export const HoverIcon = styled.a`
 `;
 
 
-export const MenuIcon = styled.img`
-  height: 24px;
-`;
-
 export const Linha = styled.img`
   width: 100%;
 `;

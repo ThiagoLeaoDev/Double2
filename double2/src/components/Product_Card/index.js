@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { IconContext } from "react-icons";
+import {  BiHeart } from "react-icons/bi";
+import { AnimatePresence } from "framer-motion"
+
 
 import * as SC from "./ProductCardStyle"
 
 import ProductImage from "../../assets/blusa_preta.png"
 import NewFlag from "../../assets/new_flag.svg"
-import HeartIcon from "../../assets/heart.svg"
 
-export default function index() {
+export default function Index() {
+  const [Hover, setHover] = useState(false);
+  
   return (
-    <SC.CardProduct href="#">
+    <SC.CardProduct href="#"
+    onMouseEnter={() => setHover(true)}
+    onMouseLeave={() => setHover(false)}>
 
       <SC.NewFlag>
         <SC.ImageFlag src={ NewFlag }/>
@@ -16,21 +23,34 @@ export default function index() {
       </SC.NewFlag>
 
       <SC.ContainerHeart href="#">
-        <SC.Heart src={ HeartIcon }/>
+        <IconContext.Provider value={{ color: "var(--grey)", size: "2.5em"}}>
+          <BiHeart/>
+        </IconContext.Provider>
       </SC.ContainerHeart>
 
       <SC.SaleFlag>
         <SC.TextSale>40% off</SC.TextSale>
       </SC.SaleFlag>
-
-      <SC.ContainerButtons>
-        <SC.ButtonView href="#">
-          <SC.ButtonProductText>Visualizar produto</SC.ButtonProductText>
-        </SC.ButtonView>
-        <SC.ButtonBuy  href="#">
-          <SC.ButtonProductText>Comprar agora</SC.ButtonProductText>
-        </SC.ButtonBuy>
-      </SC.ContainerButtons>
+      <AnimatePresence>
+        {
+          Hover && (
+            //initial estado inicial, animate estado final da animação,
+            //exit quando o componente for desmontado
+            <SC.ContainerButtons
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              exit={{opacity: 0}}
+              transition={{duration: 0.2}}>
+              <SC.ButtonView href="#">
+                <SC.ButtonProductText>Visualizar produto</SC.ButtonProductText>
+              </SC.ButtonView>
+              <SC.ButtonBuy  href="#">
+                <SC.ButtonProductText>Comprar agora</SC.ButtonProductText>
+              </SC.ButtonBuy>
+            </SC.ContainerButtons>
+          )
+        }
+      </AnimatePresence>
 
       <SC.ImageProduct src={ ProductImage }/>
 
