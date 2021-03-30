@@ -2,7 +2,7 @@ import React from 'react';
 import { IconContext } from "react-icons";
 import { BiShoppingBag, BiHeart, BiUser, BiSearch} from "react-icons/bi";
 
-import * as SC from "./HeaderStyle"
+import * as SC from "./HeaderStyle";
 
 import Logo from "../../assets/logo.svg"
 

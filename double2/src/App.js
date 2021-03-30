@@ -1,12 +1,11 @@
 import React from 'react'
 
-import Banner from "./assets/banner.png"
-
 import * as SC from "./components/Header/HeaderStyle"
 import GlobalStyles from "./global"
 import "./main.css"
 
 import Header from './components/Header'
+import Slide from './components/Slide'
 import CardProduct from './components/Product_Card'
 
 function App() {
@@ -14,8 +13,9 @@ function App() {
     <div id="app">
       <GlobalStyles/>
       <Header/>
-      <SC.Linha src={Banner}/>
-      <CardProduct/>
+      <Slide/>
+      {/* <SC.Linha src={Banner}/> */}
+      <CardProduct linkProduct="pages/Product/index.js"/>
     </div>
   );
 }

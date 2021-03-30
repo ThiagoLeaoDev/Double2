@@ -9,7 +9,7 @@ import * as SC from "./ProductCardStyle"
 import ProductImage from "../../assets/blusa_preta.png"
 import NewFlag from "../../assets/new_flag.svg"
 
-export default function Index() {
+export default function Index(props) {
   const [Hover, setHover] = useState(false);
   
   return (
@@ -44,7 +44,7 @@ export default function Index() {
               <SC.ButtonView href="#">
                 <SC.ButtonProductText>Visualizar produto</SC.ButtonProductText>
               </SC.ButtonView>
-              <SC.ButtonBuy  href="#">
+              <SC.ButtonBuy  href={props.linkProduct}>
                 <SC.ButtonProductText>Comprar agora</SC.ButtonProductText>
               </SC.ButtonBuy>
             </SC.ContainerButtons>
