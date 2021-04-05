@@ -44,7 +44,7 @@ export default function Index(props) {
               <SC.ButtonView href="#">
                 <SC.ButtonProductText>Visualizar produto</SC.ButtonProductText>
               </SC.ButtonView>
-              <SC.ButtonBuy  href={props.linkProduct}>
+              <SC.ButtonBuy  to={props.linkProduct}>
                 <SC.ButtonProductText>Comprar agora</SC.ButtonProductText>
               </SC.ButtonBuy>
             </SC.ContainerButtons>
