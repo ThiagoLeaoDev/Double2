@@ -70,6 +70,8 @@ body {
 	--light-grey: #9A9A9A;
 	--pastel-yellow: #FFBA52;
 	--pastel-red: #EA8E8E;
+	--text-grey: #858585;
+	--text-light-grey: #ACACAC;
 	font-family: 'Poppins', sans-serif;
 }
 
