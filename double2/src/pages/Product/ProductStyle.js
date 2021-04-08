@@ -2,15 +2,42 @@ import styled from "styled-components";
 
 export const ContainerContent = styled.div`
   padding-top: 160px;
-  height: 100vh;
   width: 100%;
+  height: 610px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+`;
+
+export const ContainerImages = styled.div`
+  width: 25vw;
+  height: 100%;
+  margin-left: 16%;
   display: flex;
   flex-direction: row;
 `;
 
-export const ContainerImages = styled.div`
-  width: 50vw;
+export const ContainerLeftImages = styled.div`
   height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar{
+    width: 8px;
+  }
+`;
+
+export const MiniImage = styled.img`
+  width: 100%;
+  max-width: 140px;
+  margin: 0px 20px 20px 0px;
+`;
+
+export const SelectedImage = styled.img`
+  width: 70%;
 `;
 
 export const ContainerProdInfos  = styled.div`
@@ -60,6 +87,7 @@ export const ContainerPrice  = styled.div`
 export const TextDiscount  = styled.p`
   font-size: 1.125rem;
   color: var(--text-grey);
+  text-decoration: line-through;
 `;
 
 export const TextPrice  = styled.p`
@@ -97,6 +125,10 @@ export const CircleSize  = styled.div`
   justify-content: space-around;
   background-color: var(--black);
   opacity: 0.45;
+    &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
 `;
 export const TextSize  = styled.p`
   font-weight: bold;
@@ -166,12 +198,10 @@ export const ContainerShipping  = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 25px;
 `;
 
 export const TitleCalc  = styled.p`
-   
-   
-   
 `;
 
 export const InputCalc  = styled.input`
@@ -198,25 +228,65 @@ export const ButtonCalc  = styled.button`
 `;
 
 export const ContainerShippingInfos  = styled.div`
-   
-   
-   
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+  background-color: #E5E5E5;
+  padding: 10px 20px 30px 20px;
+  border-radius: 10px;
 `;
 
-export const TextAddress  = styled.div`
-   
-   
-   
+export const TextAddress  = styled.p`
+  font-size: 0.75rem;
+  color: var(--text-grey);
 `;
 
-export const TitleShipping  = styled.div`
-   
-   
-   
+export const ContainerShippingPrice  = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
 `;
 
-export const TextShippingPrice  = styled.div`
-   
-   
-   
+
+export const TitleShipping  = styled.picture`
+  font-weight: 500;
+`;
+
+export const TextShippingPrice  = styled.p`
+  font-weight: bold;
+  color: var(--green);
+`;
+
+export const ContainerDescRating  = styled.div`
+  margin-bottom: 30px;
+`;
+
+export const ContainerOptions  = styled.div`
+  width: 190px;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+`;
+
+export const TextOption  = styled.p`
+  font-weight: 500;
+  color: var(--text-grey);
+`;
+
+export const DivisorDesc  = styled(Divisor)`
+  width: 100%;
+  margin-bottom: 25px;
+`;
+
+export const TextDesc  = styled.p`
+  width: 40%;
+  margin-left: 10%;
+  text-align: left;
+  color: var(--text-grey);
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 2px;
 `;
