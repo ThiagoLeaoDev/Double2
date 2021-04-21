@@ -1,4 +1,4 @@
-import React from 'react'
+import  {React, useState}from 'react'
 import { FaRegStar, FaStar } from "react-icons/fa";
 
 import * as SC from "./ProductStyle"
@@ -14,7 +14,9 @@ import Image4 from '../../assets/IMG_0004.jpg';
 import Image5 from '../../assets/IMG_0005.jpg';
 import Image6 from '../../assets/IMG_0006.jpg';
 
+
 function App() {
+  const [Zoom, setZoom] = useState(false);
   let teste = [0, 1, 2, 3, 4];
   return (
     <div id="app">
@@ -30,7 +32,7 @@ function App() {
             <SC.MiniImage src={Image4}/>
             <SC.MiniImage src={Image5}/>
           </SC.ContainerLeftImages>
-          <SC.SelectedImage src={Image6}/>
+          <SC.SelectedImage src={Image6} />
         </SC.ContainerImages>
         <SC.ContainerProdInfos>
           <SC.TitleProduct>CAMISETA REGULAR DOUBLE² ALTERNATIVE AMARELA</SC.TitleProduct>

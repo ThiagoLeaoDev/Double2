@@ -10,24 +10,19 @@ import Banner from "../../assets/banner.png"
 
 export default function Slider() {
   return (
-    <>
-      <Carousel autoplay autoplayInterval={2000} wrapAround
-      renderCenterLeftControls={({ previousSlide }) => (
-        <SC.PrevImage src={PreviousArrow} alt="" onClick={previousSlide}/>
-      )}
-      renderCenterRightControls={({ nextSlide }) => (
-        <SC.NextImage src={NextArrow} alt="" onClick={nextSlide}/>
-      )}
-      >
-        <img src={Banner} />
-        <img src={Banner} />
-        <img src={Banner} />
-        <img src={Banner} />
-        <img src={Banner} />
-      </Carousel>
-      <SC.ContainerSlideLink>
-        <SC.TextSlideLink>Visualizar Linha Completa</SC.TextSlideLink>
-      </SC.ContainerSlideLink>
-    </>
+    <Carousel autoplay autoplayInterval={2000} wrapAround
+    renderCenterLeftControls={({ previousSlide }) => (
+      <SC.PrevImage src={PreviousArrow} alt="" onClick={previousSlide}/>
+    )}
+    renderCenterRightControls={({ nextSlide }) => (
+      <SC.NextImage src={NextArrow} alt="" onClick={nextSlide}/>
+    )}
+    >
+      <img src={Banner} />
+      <img src={Banner} />
+      <img src={Banner} />
+      <img src={Banner} />
+      <img src={Banner} />
+    </Carousel>
   )
 }

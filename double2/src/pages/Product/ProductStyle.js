@@ -38,6 +38,9 @@ export const MiniImage = styled.img`
 
 export const SelectedImage = styled.img`
   width: 70%;
+  &:hover{
+    cursor: zoom-in;
+  }
 `;
 
 export const ContainerProdInfos  = styled.div`

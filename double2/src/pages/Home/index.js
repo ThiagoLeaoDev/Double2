@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as SC from "../../components/Header/HeaderStyle";
+import * as SC from "./HomeStyle";
 import GlobalStyles from "../../global";
 import "../../main.css"
 
@@ -15,7 +15,19 @@ function Home() {
       <Header/>
       <Slide/>
       {/* <SC.Linha src={Banner}/> */}
-      <CardProduct linkProduct="/product"/>
+      <SC.ContainerLine>
+        <SC.ContainerLineLink>
+          <SC.TextLineLink>Visualizar Linha Completa</SC.TextLineLink>
+        </SC.ContainerLineLink>
+        <CardProduct linkProduct="/product"/>
+        <CardProduct linkProduct="/product"/>
+        <CardProduct linkProduct="/product"/>
+        <CardProduct linkProduct="/product"/>
+        <CardProduct linkProduct="/product"/>
+        <CardProduct linkProduct="/product"/>
+        <CardProduct linkProduct="/product"/>
+      </SC.ContainerLine>
+      
     </div>
   );
 }

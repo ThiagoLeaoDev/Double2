@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 
 export const CardProduct = styled.div`
   width: 300px;
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-bottom: 40px;
   &:hover{
     cursor: pointer;
   }
